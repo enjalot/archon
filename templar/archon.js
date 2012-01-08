@@ -1,0 +1,47 @@
+var codeeditor, dataeditor, init, svg_foot, svg_head, svgeditor, update;
+svg_head = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.0//EN\" \"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd\">\n<svg version=\"1.0\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<g id=\"demoholder\">";
+svg_foot = "</g>\n</svg>";
+svgeditor = ace.edit("js_div0");
+dataeditor = ace.edit("js_div1");
+codeeditor = ace.edit("js_div2");
+init = function() {
+  var JavascriptMode;
+  console.log("sup");
+  JavascriptMode = require("ace/mode/javascript").Mode;
+  console.log("svgeditor", svgeditor);
+  svgeditor.setTheme("ace/theme/twilight");
+  svgeditor.getSession().setMode(new JavascriptMode());
+  svgeditor.getSession().setValue(svg_code);
+  dataeditor.setTheme("ace/theme/twilight");
+  dataeditor.getSession().setMode(new JavascriptMode());
+  dataeditor.getSession().setValue(data_code);
+  codeeditor.setTheme("ace/theme/twilight");
+  codeeditor.getSession().setMode(new JavascriptMode());
+  codeeditor.getSession().setValue(demo_code);
+  $('#js_div0').show();
+  $('#js_div1').show();
+  $('#js_div2').show();
+  return d3.select('#update').on("click", function() {
+    d3.select("#demo").remove();
+    d3.select("#demosvg").append("svg:g").attr("id", "demo");
+    return update();
+  });
+};
+update = function() {
+  var code, data, demosvg, html, inner, node, range, svg, svgnode;
+  svg = svg_head + svgeditor.getSession().getValue() + svg_foot;
+  range = document.createRange();
+  range.selectNode(document.body);
+  node = range.createContextualFragment(svg);
+  svgnode = d3.select(node);
+  demosvg = document.importNode(svgnode.select("#demoholder").node(), true);
+  d3.select("#demo").node().appendChild(demosvg);
+  data = dataeditor.getSession().getValue();
+  eval(data);
+  code = codeeditor.getSession().getValue();
+  eval(code);
+  console.log("THE DEMO NODE");
+  console.log(d3.select("#demo").node());
+  html = $('<div>').append($('#demoholder').clone()).remove().html();
+  return inner = html.slice(19, -4);
+};

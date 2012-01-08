@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    Column chart with single overlayed gradient
+-->
+<html lang='en'>
+<head>    
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Project Archon</title>
+    <link rel='stylesheet' href='style.css' />
+</head>
+<body>
+<div id='site_wrapper'>
+    <!-- ================================
+        Top Header
+        ================================= -->
+    <div id='header_wrapper'>
+        <div id='header'>
+            Visual.ly | Archon
+        </div>
+    </div>
+
+    <!-- ================================
+        Left Side (svg and video)
+        ================================= -->
+    <div id='svg_video_wrapper' class='wrapper'>
+    <div id='svg_video'>
+        <!-- ================================
+            Update Butotn
+            ================================= -->
+        <li id="update" 
+            class='button'>
+            Update SVG
+        </li>
+        <!-- ================================
+            SVG Element
+            ================================= -->
+        <div id='demo_svg_title'    
+            class='inner_wrapper_title'>
+            SVG Output
+        </div>
+        <div id='demo_svg_wrapper'>
+            <div id='demo_dvg_inner' class='wrapper_inner'>
+                <svg id="demosvg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="demo">
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <!-- ================================
+            Video Element
+            ================================= -->
+        <div id='video_title'    
+            class='inner_wrapper_title'>
+            Professor Illathonian
+        </div>
+        <div id='video_wrapper'>
+            <div id='video' class='wrapper_inner'>
+                <div id="vimeo">
+                    <iframe src="http://player.vimeo.com/video/33097206?title=0&amp;byline=0&amp;portrait=0" width="500" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/33097206">[dd3] Selections in d3.js with a simple bar chart</a> from <a href="http://vimeo.com/user4640702">Ian Johnson</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ================================
+        Right Side (Code editing area)
+        ================================= -->
+    <div id='code_wrappers_wrapper' class='wrapper'>
+        <div id='code_editor_title'
+            class='inner_wrapper_title'>
+            Code Editor
+        </div>
+        <div id='data_editor_title'
+            class='inner_wrapper_title'>
+            Data Editor
+        </div>
+        <div id='svg_editor_title'
+            class='inner_wrapper_title'>
+            SVG Editor
+        </div>
+        
+        <div id='code_wrappers'>
+            <form accept-charset="utf-8" id="codeeditor">
+                <div id="js_div2" class="js_div"></div>
+            </form>
+            <form accept-charset="utf-8" id="dataeditor">
+                <div id="js_div1" class="js_div"></div>
+            </form>
+            <form accept-charset="utf-8" id="svgeditor">
+                <div id="js_div0" class="js_div"></div>
+            </form>
+        </div>
+    </div>
+
+<!-- Close site wrapper -->
+</div>
+
+<!-- ================================
+    Script Tags
+    ================================= -->
+<!-- Script tags should go at end of document so page elements load without
+    having to wait for script tags -->
+<script type="text/javascript" src="lib/d3/d3.js"></script>
+<script type="text/javascript" src="lib/d3/d3.geom.js"></script>
+<script type="text/javascript" src="lib/d3/d3.layout.js"></script>
+
+<!--
+<script src="lib/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/backbone.min.js" type="text/javascript" charset="utf-8"></script>
+-->
+<script src="lib/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="ace/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+<script src="ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script src="bardemo.js" type="text/javascript" charset="utf-8"></script> 
+<script src="themes.json" type="text/javascript" charset="utf-8"></script>
+
+<script src="archon.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        init();
+        update();
+    });
+</script>
+
+  </body>
+</html>
+
+

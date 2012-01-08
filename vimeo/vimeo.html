@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+<script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.5.0"></script>
+
+    <!-- <script src="http://a.vimeocdn.com/js/froogaloop2.min.js?27e51-1326004677"></script> -->
+
+    <style>
+        #player1 {
+            position: absolute;
+        }
+        #overlay {
+            position: absolute;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div id="buttons">
+        <input id="go" class="go" type="button" value="Go"></input>
+    </div>
+    <!--
+        <iframe id="player1" class="vimeo" src="http://player.vimeo.com/video/33097206?api=1?player_id=player1" width="400" height="225" frameborder="0"></iframe>
+        -->
+        <iframe id="player1" class="vimeo"  src="http://player.vimeo.com/video/33097206?api=1&amp;player_id=player1" width="540" height="304" frameborder="0"></iframe>
+        <svg id="overlay"></svg>
+
+        <script type="text/javascript" src="timeline.js"></script>
+    <script type="text/javascript" src="../lib/froogaloop.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript" src="vimeo.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+var theme = {
+    base_color: "#00cc00",
+    tween_range: ['#ff0000', '#0000ff'],
+    opacity: 100,
+    background_color: "#FFcccc",
+    stroke_color: "#abc123",
+    stroke_width: 3,
+    stroke_opacity: 100,
+    label_bg_color: "#AAAAAA",
+    label_bg_opacity: 100,
+    label_border_color: "#AAAAAA",
+    label_border_opacity: 100,
+    label_border_width: 1,
+    axis_bg_color: "#FFFFFF",
+    axis_bg_opacity: 0,
+    axis_font_color: "#000000",
+    axis_font_family: "Verdana",
+    axis_font_size: 16,
+    axis_stroke_color: "#000000",
+    axis_stroke_opacity: 100,
+    axis_stroke_width: 1,
+}
+

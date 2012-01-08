@@ -1,0 +1,342 @@
+/* ========================================================================    
+ *
+ * style.css
+ * ------------
+ *
+ * Main CSS style file, applied to all pages
+ *
+ * ======================================================================== */
+@font-face {
+        font-family: FSAlbertaLight;
+        /*src: url('fonts/FSAlbert-Light.otf');*/
+        src: url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbert-Light.otf'); 
+        src: url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbert-Light.eot?#iefix') format('embedded-opentype'), 
+            url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbert-Light.woff') format('woff'), 
+            url('http://visual.ly/sites/all/themes/infographics/`fonts/FSAlbert-Light.ttf') format('truetype'), 
+            url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbert-Light.svg#webfont') format('svg'); 
+
+}
+
+@font-face {
+        font-family: FSAlbertaBold;
+        /*src: url('fonts/FSAlbertExtra.otf');*/
+        src: url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbertExtra.eot'); 
+        src: url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbertExtra.eot?#iefix') format('embedded-opentype'), 
+            url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbertExtra.woff') format('woff'), 
+            url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbertExtra.ttf') format('truetype'), 
+            url('http://visual.ly/sites/all/themes/infographics/fonts/FSAlbertExtra.svg#webfont') format('svg'); 
+}
+
+/* ========================================================================    
+ *
+ * Base Styles 
+ *
+ * ======================================================================== */
+html, body {
+    background:#f4f4f4 url(bg_squares.png);
+    bottom:0;
+    color: #2c2d32;
+    font-family: FSAlbertaLight, Arial, Helvetica, Tahoma;
+    left:0;
+    margin:0;
+    padding:0;
+    position:absolute;
+    right:0;
+    text-shadow:0 0 1px #ffffff;
+    top:0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color:#7291AD;
+    font-weight:bold;
+    padding:5px;
+    text-decoration:none;
+} 
+a:hover {
+    color:#A28167;
+    text-decoration:underline;
+}
+
+li {
+    list-style: none;
+}
+/* ========================================================================    
+ *
+ *                              LAYOUT
+ *
+ * ======================================================================== */
+#site_wrapper {
+    bottom:0;
+    left:0;
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+/* ========================================================================    
+ *
+ * Top Header
+ *
+ * ======================================================================== */
+#header_wrapper {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    border: 1px solid #ABABAB;
+    background: #eeeeee;
+    height:30px;
+    left:0;
+    position:absolute;
+    right:0;
+    top:0;
+}
+    #header {
+        border-bottom: 1px solid #ffffff;
+        border-top: 1px solid #f4f4f4;
+        bottom:0px;
+        font-size:1.2em;
+        font-weight: bold;
+        left:0;
+        padding:0 1%;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+    
+/* ========================================================================    
+ *
+ * SVG and Video
+ *
+ * ======================================================================== */
+/* ========================================================================    
+ * Wrappers
+ * ======================================================================== */
+#svg_video_wrapper {
+    bottom:1%;
+    left:1%;
+    position:absolute;
+    right:56%;
+    top:40px;
+}
+    /* this should take up full width / height of the parent element */
+    #svg_video {
+        border:1px solid #ffffff;
+        bottom:0;
+        left:0;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+    /* =========================================================================
+     * Update button
+     * ========================================================================= */ 
+    #update {
+        position:absolute;
+        right:1%;
+        top:5px; 
+    }
+    /* ========================================================================    
+     * SVG Element
+     * ======================================================================== */
+    #demo_svg_wrapper {
+        bottom:50%;
+        left:0;
+        position:absolute;
+        right:0;
+        top:34px;
+    }
+        #demosvg {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+    /* ========================================================================    
+     * Video
+     * ======================================================================== */
+    #video_title {
+        top:49% !important;
+    }
+    #video_wrapper {
+        bottom:0;
+        left:0;
+        position:absolute;
+        right:0;
+        top:51%;
+    }
+        #video {
+        }
+
+/* ========================================================================    
+ *
+ * Code editors
+ *
+ * ======================================================================== */
+#code_wrappers_wrapper {
+    bottom:1%;
+    left:45%;
+    position:absolute;
+    right:1%;
+    top:40px;
+}
+    #code_wrappers {
+        border:1px solid #ffffff;
+        bottom:0;
+        left:0;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+
+    /* =========================================================================
+     * Form elements for editable content 
+     * ========================================================================= */ 
+    #code_wrappers form {
+        border:1px solid #bcbcbc;
+        bottom:0;
+        left:1%;
+        position:absolute;
+        right:1%;
+        top:0;
+    }
+        /* The divs inside the forms should take up the entire thing */
+        .js_div {
+            border:1px solid #ffffff;
+            bottom:0px;
+            left:0px;
+            position:absolute;
+            right:0px;
+            top:0px;
+        }
+    /*Override positions of the individual forms to place them at
+     * 33% intervals (note, we could also have used floats here */
+    #codeeditor {
+        height:44% !important;
+        top:4% !important;
+    }
+    #dataeditor {
+        height:22% !important;
+        top:52% !important;
+    }
+    #svgeditor {
+        height:21% !important;
+        top:78% !important;
+    }
+    
+    #code_editor_title {
+    }
+    #data_editor_title {
+        top:48.5% !important;  
+    }
+    #svg_editor_title {
+        top:74.5% !important;  
+    }
+/* =========================================================================
+ *
+ * Reusable Classes
+ *
+ * ========================================================================= */ 
+.wrapper {
+    border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ABABAB;
+    background: #eeeeee;
+    display: block;
+}
+
+    .wrapper_inner {
+        background:#ffffff;
+        border:1px solid #bcbcbc;
+        bottom:10px;
+        left:10px;
+        padding:2px;
+        position:absolute;
+        right:10px;
+        top:10px;
+    }
+    .inner_wrapper_title {
+        left:10px;
+        position:absolute;
+        top:5px;
+    }
+
+/* =========================================================================
+ * ACE Styles 
+ * ========================================================================= */ 
+.ace-twilight .ace_print_margin {
+    background: rgba(255, 255, 255, .1) !important;
+    width: 2px !important;
+}
+
+/* =========================================================================
+ * Butotns
+ * ========================================================================= */ 
+li.button {
+    background-color: #a5b8da;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a5b8da), to(#7089b3));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+    background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+    background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+    background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+    background-image: linear-gradient(top, #a5b8da, #7089b3);
+    border-top: 1px solid #758fba;
+    border-right: 1px solid #6c84ab;
+    border-bottom: 1px solid #5c6f91;
+    border-left: 1px solid #6c84ab;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+    -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
+    -moz-box-shadow: inset 0 1px 0 0 #aec3e5;
+    -ms-box-shadow: inset 0 1px 0 0 #aec3e5;
+    -o-box-shadow: inset 0 1px 0 0 #aec3e5;
+    box-shadow: inset 0 1px 0 0 #aec3e5;
+    color: #ffffff;
+    font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    line-height: 1;
+    padding: 8px 0;
+    text-align: center;
+    text-shadow: 0 -1px 1px #64799e;
+    text-transform: uppercase;
+    width: 150px; 
+}
+
+li.button:hover {
+    background-color: #9badcc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9badcc), to(#687fa6));
+    background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+    background-image: linear-gradient(top, #9badcc, #687fa6);
+    border-top: 1px solid #6d86ad;
+    border-right: 1px solid #647a9e;
+    border-bottom: 1px solid #546685;
+    border-left: 1px solid #647a9e;
+    -webkit-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    -moz-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    -ms-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    -o-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    box-shadow: inset 0 1px 0 0 #a5b9d9;
+    cursor: pointer; 
+}
+
+li.button:active {
+    border: 1px solid #546685;
+    -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+    -ms-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+    -o-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee; 
+}
